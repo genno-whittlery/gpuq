@@ -40,6 +40,23 @@ python3 gpuq.py daemon status
 
 You should see a recent `idle` heartbeat.
 
+## Shell alias (recommended)
+
+Add to your `~/.zshrc` or `~/.bashrc` so you don't have to type `python3 ...gpuq.py` every time:
+
+```bash
+export GPUQ_HOST=user@gpubox.tail1234.ts.net
+alias gpuq='python3 ~/gpuq/gpuq.py'      # adjust the path to wherever you cloned this repo
+```
+
+Then `source ~/.zshrc` (or open a new tab). After that:
+
+```bash
+gpuq list
+gpuq gpu
+gpuq submit train --name sumi-v2 --yaml 'C:\ai-toolkit\config\sumi-flux2-v2.yaml'
+```
+
 ## Submit jobs
 
 ```bash
